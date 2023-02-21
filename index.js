@@ -221,11 +221,23 @@ function displayNews() {
         link.href = news.url;
         link.innerHTML="Read more";
 
+        let like = document.createElement("button")
+        like.className="btn btn-dark"
+        like.innerHTML="👍";
+
+        let dislike = document.createElement("button")
+        dislike.className="btn btn-dark"
+        dislike.innerHTML="👎";
+
+
         cardBody.appendChild(newsHeading);
         cardBody.appendChild(dateHeading);
         cardBody.appendChild(discription);
         cardBody.appendChild(link);
-
+        
+        cardBody.appendChild(like);
+        
+        cardBody.appendChild(dislike);
         card.appendChild(image);
         card.appendChild(cardBody);
 
